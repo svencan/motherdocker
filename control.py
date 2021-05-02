@@ -51,3 +51,27 @@ class Control:
 
     def yaw_right(self):
         self.ctrl_yaw_right.click()
+    
+    def roll_left(self):
+        self.ctrl_roll_left.click()
+
+    def roll_right(self):
+        self.ctrl_roll_right.click()
+    
+    def translate_left(self):
+        self.ctrl_translate_left.click()
+
+    def translate_right(self):
+        self.ctrl_translate_right.click()
+
+    def translate_up(self):
+        self.ctrl_translate_up.click()
+
+    def translate_down(self):
+        self.ctrl_translate_down.click()
+    
+    def translate_forward(self):
+        self.ctrl_translate_forward.click()
+
+    def translate_backward(self):
+        self.ctrl_translate_backward.click()
