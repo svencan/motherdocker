@@ -1,4 +1,4 @@
-# motherdrocker
+# motherdocker
 
 motherdocker is an autopilot for iss-sim.spacex.com
 
