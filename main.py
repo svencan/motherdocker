@@ -89,23 +89,17 @@ def x_correction(error, rate, negative_correction, positive_correction):
         print('Normal correction right')
         positive_correction()
         return rate + 1
-    elif error <= 50 and rate < 0:
+    elif error <= 50 and rate < -0.08:
         positive_correction()
         return rate + 1
     elif error >= -50 and rate > 0:
         negative_correction()
         return rate - 1
-    elif rate == 0:
+    elif rate > -0.08:
         if error > 0:
             print('Micro-correction left')
             negative_correction()
-            time.sleep(1)
-            positive_correction()
-        if error < 0:
-            print('Micro-correction right')
-            positive_correction()
-            time.sleep(1)
-            negative_correction()
+            return rate - 1
 
     return rate
 
@@ -174,10 +168,6 @@ while not abort:
 
         x = coordinates[0]
         rate_x = x_correction(x, rate_x, control.translate_forward, control.translate_backward)
-        
-        
-
-        # POWER!
 
     print("FPS: ", 1.0 / (time.time() - start_time)) # FPS = 1 / time to process loop
     time.sleep(0.05)

@@ -1,5 +1,7 @@
 # motherdocker
 
+Autopilot in action: https://www.youtube.com/watch?v=HD3xq8EtdOM
+
 motherdocker is an autopilot for iss-sim.spacex.com
 
 Install requirements with ``pip install -r requirements.txt``
