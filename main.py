@@ -99,11 +99,13 @@ def x_correction(error, rate, negative_correction, positive_correction):
         if error > 0:
             print('Micro-correction left')
             negative_correction()
-            return rate + 1
+            time.sleep(1)
+            positive_correction()
         if error < 0:
             print('Micro-correction right')
             positive_correction()
-            return rate - 1
+            time.sleep(1)
+            negative_correction()
 
     return rate
 
